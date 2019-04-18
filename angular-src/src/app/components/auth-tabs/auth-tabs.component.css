@@ -1,0 +1,33 @@
+.bodyDiv {
+  height: 100vh;
+}
+
+div.bodyContainer {
+  margin-top: 50px !important;
+}
+
+.tabs a {
+  color: cadetblue;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tabs .active {
+  background: inherit !important;
+}
+
+.auth-content {
+  height: 550px !important;
+}
+/* 
+.bodyContainer {
+  height: 40%;
+} */
+
+.body {
+  background-image: url('./index.jpg');
+  background-size: 100%;
+  margin: 0；;
+  /* background-repeat: no-repeat; */
+  /* background-repeat: no-repeat; */
+}
