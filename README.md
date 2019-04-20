@@ -1,5 +1,7 @@
 # iChat
 Introduction: social media website developed by Node.js and Angular JS 7
+<br>
+Implemented by Zhehao Lin(versatility), Hao Zhao（rookie）.
 ## Front-end design
 ### Sign up
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/sign up.png" alt="sign up" align=center/>
