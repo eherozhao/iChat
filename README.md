@@ -59,7 +59,6 @@ This is the most important feature and the most difficult feature for the whole 
 
 ## Team Members' Contribution
 #### Hao Zhao:
-<br>
 Angular JS: Login, Signup components(html + css + typescript)
 <br>
 Backend: Controller—login, signup, including token, hash code to
@@ -70,7 +69,6 @@ Deploy Heroku
 Making slide and report
 
 #### Zhehao Lin:
-<br>
 MongoDb design
 <br>
 Angular JS: auth-tabs, comments, followers and other components
