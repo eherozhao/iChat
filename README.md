@@ -38,6 +38,7 @@ The users can text in the text field and click “POST”, then the text will be
 ### Image share
 User should click “IMAGE” button first and then click “POST” to upload their images into the moment.
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/photo.png" alt="photo" align=center/>
+Users have the privilege to upload the image they like to be their profile. This function will store the image information into the MongoDB database by using the Cloudinary API.
 ### Comment and thumbs up
 <br>
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/add comment.png" alt="add comment" align=center/>
@@ -46,7 +47,30 @@ Users can comment others’ images and texts. Meanwhile, they can click the “t
 
 ### Notification
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/notification.png" alt="notification" align=center/>
+If users receive messages, the notification icon will have a red button to notify users that they have a message to read; in the same way, if someone follow the user, they will receive the notification. They can directly click “MARK ALL AS READ” to make all information as read.
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/notification follow.png" alt="notification follow" align=center/>
 
 ### Chat
+This is the most important feature and the most difficult feature for the whole project. The team use Socket to implement the real-time chat systems.
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/chat.png" alt="chat" align=center/>
+
+## Team Members' Contribution
+Hao Zhao:
+<br>
+Angular JS: Login, Signup components(html + css + typescript)
+<br>
+Backend: Controller—login, signup, including token, hash code to
+                password
+<br>
+Deploy Heroku
+<br>
+Making slide and report 
+Zhehao Lin:
+<br>
+MongoDb design
+<br>
+Angular JS: auth-tabs, comments, followers and other components
+<br>
+Backend: Controller-function of sending friends, commenting, chatting etc. 
+<br>
+Server: socket for real-time chat
