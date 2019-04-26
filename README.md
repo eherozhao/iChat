@@ -55,7 +55,7 @@ This is the most important feature and the most difficult feature for the whole 
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/chat.png" alt="chat" align=center/>
 
 ## Team Members' Contribution
-Hao Zhao:
+### Hao Zhao:
 <br>
 Angular JS: Login, Signup components(html + css + typescript)
 <br>
@@ -65,7 +65,7 @@ Backend: Controller—login, signup, including token, hash code to
 Deploy Heroku
 <br>
 Making slide and report 
-Zhehao Lin:
+### Zhehao Lin:
 <br>
 MongoDb design
 <br>
@@ -74,3 +74,16 @@ Angular JS: auth-tabs, comments, followers and other components
 Backend: Controller-function of sending friends, commenting, chatting etc. 
 <br>
 Server: socket for real-time chat
+### Zhehao Guo:
+Angular JS: toolbar, sidebar components
+Backend: use cloudinary api
+
+## Technical Architecture
+We build our project based on MEAN stacks, which is MongoDB, Express.js, AngularJS (or Angular), and Node.js. Node.js and Express are used as backend. For the front end, we use Angular JS 7. And MongoDB is used as database.
+
+The high level process of the framework is described in the following. Firstly, client makes a request by front end which is Angular. And then, Node.js parses the request to Express.js. After that, Express.js gets database from mongoDB which stores our data and returns data. Then, Express.js returns corresponding data to Node.js. And Node.js returns the request to Angular which, finally, displays the response to client. The process is showed like the image below. 
+
+Also, we use the API named Cloudinary to store the image information created by our website into the MongoDB database. Cloudinary is a SaaS technology company, which provides a cloud-based image and video management solution. It enables users to upload, store, manage, manipulate and deliver images and video for websites and apps. Thus, we try to use it to store the images users store in our website.
+
+We deploy our project to Heroku which is a cloud platform. Heroku is a cloud platform as a service (PaaS) supporting several programming languages.
+
