@@ -35,6 +35,7 @@ The frontend need to get the image and text information which has been posted in
 
 ### Text post
 The users can text in the text field and click “POST”, then the text will be post into the moment part and also stored into the database.
+
 ### Image share
 User should click “IMAGE” button first and then click “POST” to upload their images into the moment.
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/photo.png" alt="photo" align=center/>
@@ -43,7 +44,6 @@ Users have the privilege to upload the image they like to be their profile. This
 <br>
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/add comment.png" alt="add comment" align=center/>
 Users can comment others’ images and texts. Meanwhile, they can click the “thumbs up” button to demonstrate they like the post.
-
 
 ### Notification
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/notification.png" alt="notification" align=center/>
@@ -109,14 +109,14 @@ The third is the service folder, which has all the services that need to interac
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend1.png" alt="be1" align=center/>
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend2.png" alt="be2" align=center/>
 
-For the backend, we created four folders, where the secret.js under the config file contains the configuration file for connecting mongodb.
+For the backend, we create four folders, where the secret.js under the config file contains the configuration file for connecting mongodb.
 
 The controller folder contains the business logic for all backend processing data, and writes the processed data into the database.
 
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend3.png" alt="be3" align=center/>
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend4.png" alt="be4" align=center/>
 
-We designed the database code in the model folder, which contains the attributes of all tables and the type and default values.
+We designe the database code in the model folder, which contains the attributes of all tables and the type and default values.
 
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend 5.png" alt="be5" align=center/>
 
@@ -125,6 +125,47 @@ We also create sockets on the back end, so that the backend automatically refres
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend6.png" alt="be6" align=center/>
 
 In addition, we also use the socket to detect whether the user is typing in the chat.
+
+## Challenges
+### Database design
+#### Users
+The most challenges is how to design the database, so that the clients will receive the correct message from the website.
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/user.png" alt="user" align=center/>
+
+We can see from the user's table, we store the basic information when the user logs in and register it in the database and in order to be able to find every user’s information correctly we also store the related information such as follower, following, notifications, etc. Additionally, the chat list that the user sends to the friend each time and the id of the friend are stored in the chatlist in the table.
+
+#### Posts
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/post.png" alt="post" align=center/>
+
+The second table records the post message sent by each user. We associate this table with the previous users’ table so that we can correctly find all the messages sent by each user.
+
+#### Conversation
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/conversion.png" alt="conversation" align=center/>
+
+In the conversation table, we store the records of each user and different people chatting, and associate with the subsequent, message table.
+
+#### Messages
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/message.png" alt="message" align=center/>
+
+The specific chat information in each conversation is recorded in the message table.
+### Upload user’s profile image
+For the upload image part, we use cloudinary picture management API to manage our picture.
+
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/cloud api.png" alt="cloud api" align=center/>
+
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/cloud pic.png" alt="cloud pic" align=center/>
+
+The problem is every time we upload user’s profile image like the picture shows below. We have to update all of the page from the website.
+In order to solve this problem, we have to set a new attribute in the database.
+
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/cloud img.png" alt="cloud img" align=center/>
+
+The image attribute will be stored every image they post. This attribute doesn’t need to be updated. However, we have to update the data about the “picId” and “picVersion” whenever user upload new profile image.
+So that each time when we get data from backend, we have to check whether the user have updated the profile image. If they did so we need to refresh the page automatically by using socket. 
+
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/photo.png" alt="photo" align=center/>
+
+
 
 
 
@@ -136,4 +177,10 @@ Nowadays, more and more users like to use the short videos to record their life.
 ### Recall messages
 When chatting, sometimes people might send the wrong sentence. Therefore, we would like to implement a recall button for users to retrieve the message send no more than 2 minutes. 
 
+## Conclusion
+
+We have learned a lot from this course. The course covers all part of the web development, from the history of web, the frontend development and the backend part. We think that in the future, the course can introduce more programming language about the backend development, because nowadays many backend frameworks and technical stacks are popular.
+
+## Reference
+All information are from the internet. 
 
