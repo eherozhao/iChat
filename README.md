@@ -1,6 +1,5 @@
 # iChat
 # INFSCI 2560 Web Standard and Technology
-Final Report
 
 Hao Zhao(haz92),
 Zhehao Lin(zhl140),
