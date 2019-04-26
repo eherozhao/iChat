@@ -87,3 +87,13 @@ Also, we use the API named Cloudinary to store the image information created by 
 
 We deploy our project to Heroku which is a cloud platform. Heroku is a cloud platform as a service (PaaS) supporting several programming languages.
 
+
+## Future Work
+### Group Chat
+We would like to add a function about the group chat. This function will let users chat with many people together in the same chat room and it will be easy for them to discuss or communicate with each other.
+### Post short videos
+Nowadays, more and more users like to use the short videos to record their life. Therefore, we would like to provide an interface for users to share their short video to friends.
+### Recall messages
+When chatting, sometimes people might send the wrong sentence. Therefore, we would like to implement a recall button for users to retrieve the message send no more than 2 minutes. 
+
+
