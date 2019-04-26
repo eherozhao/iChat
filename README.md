@@ -176,7 +176,8 @@ When chatting, sometimes people might send the wrong sentence. Therefore, we wou
 
 ## Conclusion
 
-We have learned a lot from this course. The course covers all part of the web development, from the history of web, the frontend development and the backend part. We think that in the future, the course can introduce more programming language about the backend development, because nowadays many backend frameworks and technical stacks are popular.
+We have learned a lot from this course. The course covers all part of the web development, from the history of web, the frontend development and the backend part. The activities and assignments are very useful for us to better understand how to develop a website step by step.
+We think that in the future, the course can introduce more programming language about the backend development, because nowadays many backend frameworks and technical stacks are popular.
 
 ## Reference
 All information are from the internet. 
