@@ -163,12 +163,6 @@ In order to solve this problem, we have to set a new attribute in the database.
 The image attribute will be stored every image they post. This attribute doesn’t need to be updated. However, we have to update the data about the “picId” and “picVersion” whenever user upload new profile image.
 So that each time when we get data from backend, we have to check whether the user have updated the profile image. If they did so we need to refresh the page automatically by using socket. 
 
-<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/photo.png" alt="photo" align=center/>
-
-
-
-
-
 ## Future Work
 ### Group Chat
 We would like to add a function about the group chat. This function will let users chat with many people together in the same chat room and it will be easy for them to discuss or communicate with each other.
