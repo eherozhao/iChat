@@ -90,9 +90,9 @@ We deploy our project to Heroku which is a cloud platform. Heroku is a cloud pla
 
 ### Frontend
 First of all, from the overall structure of the front end, we have established three folders, namely components, modules and services.
-<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frontend1.png" alt="fe1" align=center/>
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frontend 1.png" alt="fe1" align=center/>
 In the components folder, all front-end pages such as sidebar, login, toolbar, etc. are stored in html, css, and typescript. We use Materialize--A modern responsive front-end framework to design the overall page frame. 
-<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frontend2.png" alt="fe2" align=center/>
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frondend2.png" alt="fe2" align=center/>
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frontend3.png" alt="fe3" align=center/>
 The second folder is modules, which will configure sub-routes for all the pages in the previous components folder, then we will define app.module.ts to tell angular how to assemble our application.
 <img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frontend4.png" alt="fe4" align=center/>
