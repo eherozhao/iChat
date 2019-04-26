@@ -82,10 +82,38 @@ Backend: use cloudinary api
 We build our project based on MEAN stacks, which is MongoDB, Express.js, AngularJS (or Angular), and Node.js. Node.js and Express are used as backend. For the front end, we use Angular JS 7. And MongoDB is used as database.
 
 The high level process of the framework is described in the following. Firstly, client makes a request by front end which is Angular. And then, Node.js parses the request to Express.js. After that, Express.js gets database from mongoDB which stores our data and returns data. Then, Express.js returns corresponding data to Node.js. And Node.js returns the request to Angular which, finally, displays the response to client. The process is showed like the image below. 
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/mean.png" alt="mean" align=center/>
 
 Also, we use the API named Cloudinary to store the image information created by our website into the MongoDB database. Cloudinary is a SaaS technology company, which provides a cloud-based image and video management solution. It enables users to upload, store, manage, manipulate and deliver images and video for websites and apps. Thus, we try to use it to store the images users store in our website.
 
 We deploy our project to Heroku which is a cloud platform. Heroku is a cloud platform as a service (PaaS) supporting several programming languages.
+
+### Frontend
+First of all, from the overall structure of the front end, we have established three folders, namely components, modules and services.
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frontend1.png" alt="fe1" align=center/>
+In the components folder, all front-end pages such as sidebar, login, toolbar, etc. are stored in html, css, and typescript. We use Materialize--A modern responsive front-end framework to design the overall page frame. 
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frontend2.png" alt="fe2" align=center/>
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frontend3.png" alt="fe3" align=center/>
+The second folder is modules, which will configure sub-routes for all the pages in the previous components folder, then we will define app.module.ts to tell angular how to assemble our application.
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frontend4.png" alt="fe4" align=center/>
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/frontend5.png" alt="fe5" align=center/>
+The third is the service folder, which has all the services that need to interact with the backend. Here we use the restful API to post and get the data.
+
+### Backend
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend1.png" alt="be1" align=center/>
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend2.png" alt="be2" align=center/>
+For the backend, we created four folders, where the secret.js under the config file contains the configuration file for connecting mongodb.
+
+The controller folder contains the business logic for all backend processing data, and writes the processed data into the database.
+
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend3.png" alt="be3" align=center/>
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend4.png" alt="be4" align=center/>
+We designed the database code in the model folder, which contains the attributes of all tables and the type and default values.
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend 5.png" alt="be5" align=center/>
+We also create sockets on the back end, so that the backend automatically refreshes the page each time it sends data to the front end, so users can receive new messages in real time.
+<img src="https://raw.githubusercontent.com/eherozhao/iChat/master/images/backend6.png" alt="be6" align=center/>
+In addition, we also use the socket to detect whether the user is typing in the chat.
+
 
 
 ## Future Work
